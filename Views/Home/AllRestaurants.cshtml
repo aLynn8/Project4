@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "AllRestaurants";
+}
+
+@model IEnumerable<Project4.Models.UserRestaurant>
+<!--Aubrey Farnbach Section 2 Group 1-->
+<!--This page displays the Restaurants that have been added that session-->
+<div onload="LoadMovies()">
+    <p id="Movie_List">
+
+    </p>
+    <!--Bootstrap Table Style-->
+    <table class="table table-striped">
+        <thead>
+            <tr><th>Name</th><th>Restaurant Name</th><th>Favorite Dish</th><th>Phone</th></tr>
+        </thead>
+        <tbody>
+            <!--This pulls in all data from the lists in TempStorage.cs-->
+            @foreach (Project4.Models.UserRestaurant x in Model)
+            {
+                <tr>
+                    <td>@x.Name</td>
+                    <td>@x.RestaurantName</td>
+                    <td>@x.FavoriteDish</td>
+                    <td>@x.RestaurantPhone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

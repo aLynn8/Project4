@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Add Restaurants";
+}
+
+@model Project4.Models.UserRestaurant
+
+<!--Aubrey Farnbach (Wright) Section 2 Group 1-->
+
+<h1>@ViewData["Title"]</h1>
+<br />
+
+<div>
+    <form name="NewRestaurant" asp-action="AddRestaurants" method="post">
+        <div class="form-group row">
+            <!--Bootstrap form styling-->
+            <label asp-for="Name" class="col-sm-2 col-form-label">Your Name</label>
+            <div class="col-sm-10">
+                <input name="Name" id="Name" class="form-control" asp-for="Name" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="RestaurantName" class="col-sm-2 col-form-label">Restauraunt</label>
+            <div class="col-sm-10">
+                <input name="RestaurantName" id="RestaurantName" class="form-control" asp-for="RestaurantName" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="FavoriteDish" class="col-sm-2 col-form-label">Best Dish</label>
+            <div class="col-sm-10">
+                <input name="FavoriteDish" id="FavoriteDish" class="form-control" asp-for="FavoriteDish" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="RestaurantPhone" class="col-sm-2 col-form-label">Phone</label>
+            <div class="col-sm-10">
+                <input name="RestaurantPhone" id="RestaurantPhone" class="form-control" asp-for="RestaurantPhone" />
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="text-center">
+                <input type="submit" value="AddRestaurant" id="submitbutton" />
+            </div>
+        </div>
+</form>
+</div>
